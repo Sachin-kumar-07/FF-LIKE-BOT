@@ -8,20 +8,15 @@ import os
 import asyncio
 from dotenv import load_dotenv
 
-load_dotenv()
-RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
-CONFIG_FILE = "like_channels.json"
-
 class LikeCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.api_host = "https://ff-like-api-seven.vercel.app/like"
+        self.api_url = "https://ff-like-api-seven.vercel.app/like"
         self.config_data = self.load_config()
         self.cooldowns = {}
         self.session = aiohttp.ClientSession()
 
 
-            }
 
     def load_config(self):
         default_config = {
