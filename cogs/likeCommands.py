@@ -20,11 +20,7 @@ class LikeCommands(commands.Cog):
         self.cooldowns = {}
         self.session = aiohttp.ClientSession()
 
-        self.headers = {}
-        if RAPIDAPI_KEY:
-            self.headers = {
-                'x-rapidapi-key': RAPIDAPI_KEY,
-                'x-rapidapi-host': "free-fire-like1.p.rapidapi.com"
+
             }
 
     def load_config(self):
